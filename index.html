@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>LifeQA: A Real-life Dataset for Video Question Answering</title>
+  <meta name="description"
+        content="LifeQA is a benchmark dataset for Video Question Answering that focuses on day-to-day real-life situations.">
+  <meta name="keywords"
+        content="LifeQA, VideoQA, Video Question Answering, Computer Vision, Machine Learning, dataset, Natural Language Processing, Videos, YouTube, real life, research, LREC2020, LREC, Machine Learning, Deep Learning, NLP, PyTorch">
+  <meta name="author"
+        content="Santiago Castro, Mahmoud Azab, Jonathan C. Stroud, Cristina Noujaim, Ruoyao Wang, Jia Deng, and Rada Mihalcea">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="WildQA: In-the-Wild Video Question Answering" />
+  <meta property="og:image" content="https://lit.eecs.umich.edu/lifeqa/img/example.png" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:title" content="WildQA: In-the-Wild Video Question Answering" />
+  <meta property="og:description" content="LifeQA is a benchmark dataset for Video Question Answering that focuses on day-to-day real-life situations." />
+  <meta property="og:url" content="https://lit.eecs.umich.edu/lifeqa/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@michigan_AI" />
+  <meta name="twitter:creator" content="@michigan_AI" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-34392230-10"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-34392230-10');
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="main.css"/>
+</head>
+
+<body>
+
+<div class="container">
+
+  <header>
+    <a href="https://arc.engin.umich.edu/"><img id="arc" src="img/arc.png" alt="Automotive Research Center logo"></a>
+
+    <a href="https://umich.edu/"><img id="um" src="img/um.png" alt="University of Michigan logo"></a>
+
+    <h1>WildQA: In-the-Wild Video Question Answering</h1>
+
+    <ul id="quick-links">
+      <li><a href="[TBD]">Paper</a></li>
+
+      <li><a href="[TBD]">Data + Code</a></li>
+
+      <li><a href="[TBD]">COLING Anthology page</a></li>
+
+      <li><a href="[TBD]">BibTeX Citation</a></li>
+    </ul>
+  </header>
+
+  <section class="section-alt">
+    <div class="content">
+      <h2>Abstract</h2>
+
+      <p id="abstract">
+        Existing video understanding datasets mostly
+        focus on human interactions, with little attention being paid to the "in the wild" settings, where the videos are recorded outdoors.
+        We propose <b>WILDQA</b>, a video understanding
+        dataset of videos recorded in outside settings.
+        In addition to video question answering (Video
+        QA), we also introduce the new task of identifying visual support for a given question and
+        answer (Video Evidence Selection). Through
+        evaluations using a wide range of baseline models, we show that WILDQA poses new challenges to the vision and language research communities.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <a href="[TBD]">
+        <ol id="thumbnails">
+          <li><img src="img/thumbs/0.png" alt="thumbnail, page 0"/></li>
+          <li><img src="img/thumbs/1.png" alt="thumbnail, page 1"/></li>
+          <li><img src="img/thumbs/2.png" alt="thumbnail, page 2"/></li>
+          <li><img src="img/thumbs/3.png" alt="thumbnail, page 3"/></li>
+          <li><img src="img/thumbs/4.png" alt="thumbnail, page 4"/></li>
+          <li><img src="img/thumbs/5.png" alt="thumbnail, page 5"/></li>
+          <li><img src="img/thumbs/6.png" alt="thumbnail, page 6"/></li>
+        </ol>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <ol id="authors">
+        <li>
+          <a href="https://santi.uy">
+            <div class="author-img-container">
+              <img src="img/authors/santi.jpeg" alt="Santiago Castro profile picture">
+            </div>
+            Santiago Castro
+          </a>
+        </li>
+        <li>
+          <a href="https://dnaihao.github.io/">
+            <div class="author-img-container">
+              <img src="img/authors/naihao.jpeg" alt="Naihao Deng profile picture">
+            </div>
+            Naihao Deng
+          </a>
+        </li>
+        <li>
+          <div>
+            <div class="author-img-container">
+              <img src="img/authors/pingxuan.jpg" alt="Pingxuan Huang profile picture">
+            </div>
+            Pingxuan Huang
+          </div>
+        </li>
+        <li>
+          <a href="https://sites.google.com/umich.edu/mburzo">
+            <div class="author-img-container">
+              <img src="img/authors/mihai.jpeg" alt="Mihai G. Burzo profile picture">
+            </div>
+            Mihai G. Burzo
+          </a>
+        </li>
+        <li>
+          <a href="https://web.eecs.umich.edu/~mihalcea/">
+            <div class="author-img-container">
+              <img src="img/authors/rada.jpg" alt="Rada Mihalcea profile picture">
+            </div>
+            Rada Mihalcea
+          </a>
+        </li>
+      </ol>
+
+      <p id="affiliation">
+        <a href="https://umich.edu/">
+          <img id="um-vertical" alt="University of Michigan" src="img/um-vertical.png">
+        </a>
+      </p>
+
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="content">
+      <h2>Downloads</h2>
+
+      <ul id="downloads">
+        <li><a href="[TBD]">PDF Paper</a></li>
+        <li><a href="[TBD]">Data + Code</a> (with instructions)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!--section>
+    <div class="content">
+      <h2>Examples</h2>
+
+      <p></p>
+    </div>
+  </section-->
+
+  <footer>
+    <div class="content">
+      <h2>Acknowledgments</h2>
+
+      <p id="acknowledgments-text">
+        We thank all reviewers for their insightful comments, and Artem Abzaliev, 
+        <a href="https://mindojune.github.io/">Do june Min</a>, 
+        <a href="https://oanaignat.github.io/">Oana Ignat</a> 
+        for proofreading and suggestions. We thank all the annotators for their hard work on annotation. 
+        We thank William McNamee on the video collection process. We thank 
+        <a href="https://flaminghorizon.github.io/">Yiqun Yao</a> for the helpful 
+        discussion in the early stage of the project. This work receives a funding from 
+        <a href="https://arc.engin.umich.edu/">ARC</a>.
+      </p>
+
+      <p>
+        Web page inspired by the
+        <a href="https://cs.stanford.edu/people/ranjaykrishna/densevid/">ActivityNet Captions web page</a>.
+      </p>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+
+</html>

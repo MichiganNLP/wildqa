@@ -1,11 +1,11 @@
 # WildQA
 
-Code for the [WildQA website]([TBD]).
+Code for the [WildQA website](https://lit.eecs.umich.edu/wildqa/).
 
 ## Paper page thumbnails.
 
 We used ImageMagick:
 
 ```bash
-convert [0-7] ${PDF_FILE}thumbnail x156 img/thumbs/.png
+convert $PDF_FILE[0-8] -thumbnail x156 img/thumbs/%d.png
 ```

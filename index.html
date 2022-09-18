@@ -142,35 +142,52 @@
         <video id="example-video" style="max-width:80%;max-height:100%" src="https://www.dropbox.com/s/r6imsp6nqrjdq2q/Norwegian-Explorer_11-clip-54.mp4?raw=1" controls> </video>
       </div>
       <div class="example-instance">
+        <p style="text-align: center;"><i><span class="Qlabel">Green</span> from the first annotation stage,
+           <span class="Alabel">Brown</span> from the second annotation stage</i></p>
         <p class="example-question"><span class="Qlabel">Q1</span>: What kinds of bodies of water are there?</p>
         <ul class="example-answer">
           <li><span class="Qlabel">A1</span>: There are rivers and streams.<br/>
-            <button class="evidence-button-1" id="evid1.1.1" onclick="playEvidence(id,7.24,14.24)">Evidence 1</button>
+            <button class="evidence-button" id="evid1.1.1" onclick="playEvidence(id,7.24,14.24)">Evidence 1</button>
           </li>
           <li><span class="Alabel">A2</span>: There is a long stream or river between the valley.<br/>
-            <button class="evidence-button-1" id="evid1.2.1" onclick="playEvidence(id,48.41,55.96)">Evidence 1</button>
+            <button class="evidence-button" id="evid1.2.1" onclick="playEvidence(id,48.41,55.96)">Evidence 1</button>
             <button class="evidence-button" id="evid1.2.2" onclick="playEvidence(id,58.66,75.29)">Evidence 2</button>
           </li>
           <li><span class="Alabel">A3</span>: The kinds of bodies of water there are streams.<br/>
-            <button class="evidence-button-1" id="evid1.3.1" onclick="playEvidence(id,51.17,63.51)">Evidence 1</button>
+            <button class="evidence-button" id="evid1.3.1" onclick="playEvidence(id,51.17,63.51)">Evidence 1</button>
           </li>
           <li><span class="Alabel">A4</span>: There are bodies of water in this location.<br/>
-            <button class="evidence-button-1" id="evid1.4.1" onclick="playEvidence(id,7.49,11.72)">Evidence 1</button>
+            <button class="evidence-button" id="evid1.4.1" onclick="playEvidence(id,7.49,11.72)">Evidence 1</button>
             <button class="evidence-button" id="evid1.4.2" onclick="playEvidence(id,58.84,64.80)">Evidence 2</button>
           </li>
         </ul>
         <hr class="example-hr">
-        <p class="example-question"><span class="Qlabel">Q1</span>: What kinds of bodies of water are there?</p>
+        <p class="example-question"><span class="Qlabel">Q2</span>: Where are the rivers located?</p>
         <ul class="example-answer">
-          <li><span class="Qlabel">A1</span>: There are rivers and streams.<br/>
-            <button class="evidence-button-1" id="evid2.1.1" onclick="playEvidence(id,10,15)">Evidence 1</button>
-            <button class="evidence-button" id="evid2.1.2" onclick="playEvidence(id,10,15)">Evidence 2</button>
+          <li><span class="Qlabel">A1</span>: In valleys.<br/>
+            <button class="evidence-button" id="evid2.1.1" onclick="playEvidence(id,36.63,42.15)">Evidence 1</button>
           </li>
-          <li><span class="Alabel">A2</span>: There is a long stream or river between the valley.<br/>
-            <button class="evidence-button-1" id="evid2.2.1" onclick="playEvidence(id,10,15)">Evidence 1</button>
+          <li><span class="Alabel">A2</span>: The rivers are located between what seems to be two different valleys based on the man stating that it was a valley. The first river you can see the higher elevation of ground where you see the bases of the trees look slanted. The second river looks further from the valley as you can see the valley looks distant from where the men are. Lastly, the second river seemed to be more plateaued than the first.<br/>
+            <button class="evidence-button" id="evid2.2.1" onclick="playEvidence(id,27.55,32.46)">Evidence 1</button>
+            <button class="evidence-button" id="evid2.2.2" onclick="playEvidence(id,15.40,27.00)">Evidence 2</button>
+            <button class="evidence-button" id="evid2.2.3" onclick="playEvidence(id,63.14,76.70)">Evidence 3</button>
           </li>
-          <li><span class="Alabel">A3</span>: The kinds of bodies of water there are streams..<br/>
-            <button class="evidence-button-1" id="evid2.3.1" onclick="playEvidence(id,10,15)">Evidence 1</button>
+          <li><span class="Alabel">A3</span>: The rivers are located in the mountains near the bases.<br/>
+            <button class="evidence-button" id="evid2.3.1" onclick="playEvidence(id,35.28,42.15)">Evidence 1</button>
+          </li>
+        </ul>
+        <hr class="example-hr">
+        <p class="example-question"><span class="Qlabel">Q3</span>: What type of environment is it?</p>
+        <ul class="example-answer">
+          <li><span class="Qlabel">A1</span>: Mountainous, temperate forest. <br/>
+            <button class="evidence-button" id="evid3.1.1" onclick="playEvidence(id,0.0,9.45)">Evidence 1</button>
+          </li>
+          <li><span class="Alabel">A2</span>: It is a varied environment with rocky areas, greenery, and a river.<br/>
+            <button class="evidence-button" id="evid3.2.1" onclick="playEvidence(id,0.18,5.15)">Evidence 1</button>
+            <button class="evidence-button" id="evid3.2.2" onclick="playEvidence(id,59.52,67.43)">Evidence 2</button>
+          </li>
+          <li><span class="Alabel">A3</span>: It's environment type is an intermountain forest.<br/>
+            <button class="evidence-button" id="evid3.3.1" onclick="playEvidence(id,40.31,49.09)">Evidence 1</button>
           </li>
         </ul>
       </div>
@@ -228,7 +245,7 @@
   function playEvidence($id,$start,$end){
     const $video = document.getElementById("example-video");
     $video.pause();
-    document.getElementById($id).style.color = "gray";
+    document.getElementById($id).style.color = "rgb(117, 116, 116)";
     
     function checkTime() {
         if ($video.currentTime >= $end) {

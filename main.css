@@ -111,7 +111,7 @@ body {
 .example-hr {
   border: 2px dashed #a0e5aa;
   width: 96%;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .example-question {
@@ -123,33 +123,29 @@ body {
 .example-answer {
   list-style-type: none;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.1;
+  text-indent: -2em;
+  margin-left: 2em;
 }
 
-.evidence-button, .evidence-button-1 {
+.evidence-button {
   background-color: white;
   border-radius: 8px;
-  color: rgb(58, 58, 240);
+  border-color: rgba(0, 0, 0, 0.5);
+  color: rgb(65, 108, 224);
   font-size: 14px;
   margin-bottom: 7px;
 }
 
-.evidence-button-1 {
-  margin-left: 20px ;
-}
 
-.evidence-button:hover, .evidence-button-1:hover {
-  color: rgb(100, 157, 231);
+.evidence-button:hover {
+  color: rgb(109, 165, 238);
 }
 
 .Qlabel {
-  color: green;
+  color: rgb(28, 116, 33);
 }
 
 .Alabel {
-  color: brown;
-}
-
-.example-hr{
-
+  color: rgb(119, 52, 26);
 }

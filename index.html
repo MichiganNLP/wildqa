@@ -139,34 +139,38 @@
     <div class="content">
       <h2>Example</h2>
       <div class="video">
-        <video id="example-video" style="max-width:80%;max-height:100%" src="https://www.dropbox.com/s/xaw3bbhx5bmahqn/Dan-Robinson_10-clip-0.mp4?raw=1" controls> </video>
+        <video id="example-video" style="max-width:80%;max-height:100%" src="https://www.dropbox.com/s/r6imsp6nqrjdq2q/Norwegian-Explorer_11-clip-54.mp4?raw=1" controls> </video>
       </div>
       <div class="example-instance">
         <p class="example-question"><span class="Qlabel">Q1</span>: What kinds of bodies of water are there?</p>
         <ul class="example-answer">
           <li><span class="Qlabel">A1</span>: There are rivers and streams.<br/>
-            <button class="evidence-button-1" onclick="playEvidence(10,15)">Evidence 1</button>
-            <button class="evidence-button" onclick="playEvidence(10,15)">Evidence 2</button>
+            <button class="evidence-button-1" id="evid1.1.1" onclick="playEvidence(id,7.24,14.24)">Evidence 1</button>
           </li>
           <li><span class="Alabel">A2</span>: There is a long stream or river between the valley.<br/>
-            <button class="evidence-button-1" onclick="playEvidence(10,15)">Evidence 1</button>
+            <button class="evidence-button-1" id="evid1.2.1" onclick="playEvidence(id,48.41,55.96)">Evidence 1</button>
+            <button class="evidence-button" id="evid1.2.2" onclick="playEvidence(id,58.66,75.29)">Evidence 2</button>
           </li>
-          <li><span class="Alabel">A3</span>: The kinds of bodies of water there are streams..<br/>
-            <button class="evidence-button-1" onclick="playEvidence(10,15)">Evidence 1</button>
+          <li><span class="Alabel">A3</span>: The kinds of bodies of water there are streams.<br/>
+            <button class="evidence-button-1" id="evid1.3.1" onclick="playEvidence(id,51.17,63.51)">Evidence 1</button>
+          </li>
+          <li><span class="Alabel">A4</span>: There are bodies of water in this location.<br/>
+            <button class="evidence-button-1" id="evid1.4.1" onclick="playEvidence(id,7.49,11.72)">Evidence 1</button>
+            <button class="evidence-button" id="evid1.4.2" onclick="playEvidence(id,58.84,64.80)">Evidence 2</button>
           </li>
         </ul>
         <hr class="example-hr">
         <p class="example-question"><span class="Qlabel">Q1</span>: What kinds of bodies of water are there?</p>
         <ul class="example-answer">
           <li><span class="Qlabel">A1</span>: There are rivers and streams.<br/>
-            <button class="evidence-button-1" onclick="playEvidence(10,15)">Evidence 1</button>
-            <button class="evidence-button" onclick="playEvidence(10,15)">Evidence 2</button>
+            <button class="evidence-button-1" id="evid2.1.1" onclick="playEvidence(id,10,15)">Evidence 1</button>
+            <button class="evidence-button" id="evid2.1.2" onclick="playEvidence(id,10,15)">Evidence 2</button>
           </li>
           <li><span class="Alabel">A2</span>: There is a long stream or river between the valley.<br/>
-            <button class="evidence-button-1" onclick="playEvidence(10,15)">Evidence 1</button>
+            <button class="evidence-button-1" id="evid2.2.1" onclick="playEvidence(id,10,15)">Evidence 1</button>
           </li>
           <li><span class="Alabel">A3</span>: The kinds of bodies of water there are streams..<br/>
-            <button class="evidence-button-1" onclick="playEvidence(10,15)">Evidence 1</button>
+            <button class="evidence-button-1" id="evid2.3.1" onclick="playEvidence(id,10,15)">Evidence 1</button>
           </li>
         </ul>
       </div>
@@ -221,9 +225,11 @@
 </html>
 
 <script type="text/javascript">
-  function playEvidence($start,$end){
+  function playEvidence($id,$start,$end){
     const $video = document.getElementById("example-video");
     $video.pause();
+    document.getElementById($id).style.color = "gray";
+    
     function checkTime() {
         if ($video.currentTime >= $end) {
            $video.pause();
@@ -232,28 +238,32 @@
            setTimeout(checkTime, 100);
         }
     }
+
     $video.focus();
     $video.currentTime = $start;
-    $video.play();
+    setTimeout(function () {
+      // to prevent `The play() request was interrupted by a call to pause().`
+      $video.play();
+      }, 150);
     checkTime();
   }
 
-  function changeEvidenceColor() {
-    Array.from(document.getElementsByClassName("evidence-button")).map((evibut,_)=>{
-      evibut.addEventListener("click",function($this){
-        this.style.color = "gray";
-      });
-    });
-  }
+  // function changeEvidenceColor() {
+  //   Array.from(document.getElementsByClassName("evidence-button")).map((evibut,_)=>{
+  //     evibut.addEventListener("click",function($this){
+  //       this.style.color = "gray";
+  //     });
+  //   });
+  // }
 
-  function main() {
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", changeEvidenceColor);
-    } else {
-      changeEvidenceColor();
-    }
-  }
+  // function main() {
+  //   if (document.readyState === "loading") {
+  //     document.addEventListener("DOMContentLoaded", changeEvidenceColor);
+  //   } else {
+  //     changeEvidenceColor();
+  //   }
+  // }
 
-  main();
+  // main();
 
 </script>

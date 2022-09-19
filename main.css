@@ -101,3 +101,51 @@ body {
 #acknowledgments-text {
   margin-bottom: 50px;
 }
+
+.example-instance{
+  text-align: left;
+  border-radius: 15px;
+  border: 4px dashed #a0e5aa;
+}
+
+.example-hr {
+  border: 2px dashed #a0e5aa;
+  width: 96%;
+  margin-bottom: 10px;
+}
+
+.example-question {
+  padding-left: 20px;
+  font-size: 17px;
+  line-height: 0;
+}
+
+.example-answer {
+  list-style-type: none;
+  font-size: 16px;
+  line-height: 1.1;
+  text-indent: -2em;
+  margin-left: 2em;
+}
+
+.evidence-button {
+  background-color: white;
+  border-radius: 8px;
+  border-color: rgba(0, 0, 0, 0.5);
+  color: rgb(65, 108, 224);
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+
+
+.evidence-button:hover {
+  color: rgb(109, 165, 238);
+}
+
+.Qlabel {
+  color: rgb(28, 116, 33);
+}
+
+.Alabel {
+  color: rgb(119, 52, 26);
+}
